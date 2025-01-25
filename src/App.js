@@ -2,13 +2,21 @@ import logo from './logo.svg';
 import './App.css';
 import AddVisitor from './components/AddVisitor';
 import ViewAllVistors from './components/ViewAllVistors';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <AddVisitor/>
-      <ViewAllVistors/>
-    </div>
+    
+
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<AddVisitor/>} />
+        <Route path='/viewall' element={<ViewAllVistors/>} />
+      </Routes>
+    </BrowserRouter>
+    
+
+
   );
 }
 
